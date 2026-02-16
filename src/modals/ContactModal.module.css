@@ -1,0 +1,102 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.link {
+  color: var(--color-duck-4);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+  transition: opacity 0.2s;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.telegramBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  background: var(--color-duck-4);
+  border: none;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.telegramBtn:hover {
+  opacity: 0.9;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .contactList {
+    flex-direction: row;
+  }
+
+  .contactItem:first-child {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.socialLink {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  border: 1px solid color-mix(in srgb, var(--color-text-muted) 30%, transparent);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.socialLink:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.telegramHandle {
+  margin-left: 0.5rem;
+  color: var(--color-text-muted);
+}
+
+.value {
+  color: var(--color-text);
+}

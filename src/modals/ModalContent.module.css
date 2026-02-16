@@ -1,0 +1,137 @@
+/* Общие стили для контента модалок */
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.p {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.875rem;
+  }
+}
+
+.paragraph {
+  line-height: 1.625;
+  color: var(--color-text-muted);
+}
+
+.sectionTitle {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.sectionTitleLarge {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* AboutModal */
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skillTag {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-duck-1) 20%, transparent);
+  border-radius: 9999px;
+}
+
+.toolTag {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-duck-2) 15%, transparent);
+  border-radius: 9999px;
+}
+
+.softList {
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.softList li {
+  margin-bottom: 0.25rem;
+  color: var(--color-text-muted);
+}
+
+/* Experience card (Astra, Beeline) */
+.card {
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.cardAstra {
+  background: color-mix(in srgb, var(--color-duck-2) 10%, transparent);
+}
+
+.cardBeeline {
+  background: color-mix(in srgb, var(--color-duck-3) 10%, transparent);
+}
+
+.cardTitle {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.cardMeta {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
+.cardRole {
+  margin-top: 1.25rem;
+  color: var(--color-text);
+}
+
+.achievementsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.achievementItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.achievementIcon {
+  font-size: 1.5rem;
+}
+
+.achievementText {
+  color: var(--color-text-muted);
+}
+
+/* SecretModal */
+.center {
+  text-align: center;
+}
+
+.emojiLarge {
+  font-size: 1.125rem;
+}

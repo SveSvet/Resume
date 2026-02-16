@@ -1,0 +1,102 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.desktopDucks {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktopDucks {
+    display: block;
+  }
+}
+
+.mobileMenu {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 20;
+}
+
+@media (min-width: 768px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+.menuList {
+  position: absolute;
+  bottom: 4rem;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 9999px;
+  background: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menuItem:hover {
+  background: #f9fafb;
+}
+
+.menuItemLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.emoji {
+  font-size: 1.25rem;
+}
+
+.fab {
+  display: flex;
+  height: 3.5rem;
+  width: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 9999px;
+  background: var(--color-duck-1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.fab::after {
+  content: '';
+  position: absolute;
+  right: -0.9rem;          /* вынос за пределы головы */
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 0;
+  height: 0;
+
+  border-top: 0.6rem solid transparent;
+  border-bottom: 0.6rem solid transparent;
+  border-left: 1rem solid #f59e0b; /* цвет клюва */
+}
+
+.fab:hover {
+  transform: scale(1.05);
+}
+
+.fab:active {
+  transform: scale(0.95);
+}

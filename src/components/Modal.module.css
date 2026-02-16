@@ -1,0 +1,59 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.panel {
+  position: relative;
+  max-height: 90vh;
+  width: 100%;
+  max-width: 32rem;
+  overflow-y: auto;
+  border-radius: var(--radius-modal);
+  background: white;
+  padding: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.panel:focus {
+  outline: none;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 9999px;
+  color: #6b7280;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+.closeBtn:hover {
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+.closeIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.content {
+  padding-right: 1rem;
+}

@@ -1,0 +1,93 @@
+:root {
+  --color-bg: #FFF9E6;
+  --color-bg-alt: #F8F9FA;
+  --color-text: #2D3436;
+  --color-text-muted: #636E72;
+  --color-duck-1: #FFD93D;
+  --color-duck-2: #4A90E2;
+  --color-duck-3: #FF6B35;
+  --color-duck-4: #9B59B6;
+  --color-duck-secret: linear-gradient(135deg, #FFD93D, #FF6B35, #9B59B6);
+  --shadow-duck: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --radius-modal: 24px;
+  --font-display: 'Syne', 'Poppins', system-ui, sans-serif;
+  --font-body: 'Manrope', 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Duck idle animations (global, used by Duck.module.css) */
+@keyframes duckFloat {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-15px) rotate(3deg); }
+}
+
+@keyframes duckDive {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(30px); }
+}
+
+@keyframes duckSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes duckCircle {
+  0% { transform: rotate(0deg) translateX(20px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(20px) rotate(-360deg); }
+}
+
+@keyframes duckShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px) rotate(-2deg); }
+  75% { transform: translateX(4px) rotate(2deg); }
+}
+
+@keyframes duckBounceIn {
+  0% { transform: translateY(-200px) rotate(-20deg); opacity: 0; }
+  60% { transform: translateY(20px) rotate(5deg); opacity: 1; }
+  100% { transform: translateY(0) rotate(0); opacity: 1; }
+}
+
+@keyframes duckJump {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.1) rotate(10deg); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1); opacity: 0.6; }
+  100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+}
+
+.duck-idle-float { animation: duckFloat 3s ease-in-out infinite; }
+.duck-idle-dive { animation: duckDive 4s ease-in-out infinite; }
+.duck-idle-spin { animation: duckSpin 20s linear infinite; }
+.duck-idle-circle { animation: duckCircle 15s linear infinite; }
+.duck-enter { animation: duckBounceIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+.duck-click { animation: duckJump 0.3s ease-out; }
